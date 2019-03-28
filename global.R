@@ -34,7 +34,6 @@ reactL <- function(moduleName,
                      inputName,
                      k){
   if(k == 0)return(NULL)
-  print("here")
   sapply(1:k, function(X){
     toEval = paste0(moduleName, X, '()$', inputName)
     TT = try(eval(parse(text = toEval)))
